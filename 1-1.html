@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+        function button1Pressed() {
+            //乱数を生成する
+            var random = Math.random();
+
+            //乱数を0-99の範囲にする
+            random = random * 100;
+            random = Math.flor(random);
+
+            //おみくじの結果を決める
+            var result;
+            if (random > 80) {
+                result = "大吉";
+            } else {
+                result = "中吉";
+            }
+
+            //結果を表示する
+            document.getElementById("yyyyy").innerHTML = result;
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1>XXXX</h1>
+    <button onclick="button1Pressed()">X</button>
+    <button onclick="button2Pressed()">Y</button>
+    <hr>
+    <p id="yyyyy">xxxx</p>
+</body>
+
+</html>
